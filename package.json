@@ -4,7 +4,10 @@
   "description": "An Amazing HTML5 Player with support to DRM Contents",
   "main": "index.js",
   "scripts": {
-    "test": "karma start"
+    "start": "npm run dev",
+    "dev": "webpack-dev-server --config build/webpack.dev.conf.js",
+    "test": "karma start",
+    "build": "webpack --config build/webpack.prod.conf.js"
   },
   "repository": {
     "type": "git",

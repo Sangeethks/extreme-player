@@ -1,0 +1,24 @@
+{
+  "name": "extreme-player",
+  "version": "1.0.0",
+  "description": "An Amazing HTML5 Player with support to DRM Contents",
+  "main": "index.js",
+  "scripts": {
+    "test": "karma start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sangeethks/extreme-player.git"
+  },
+  "keywords": [
+    "html5-player",
+    "player",
+    "DRM"
+  ],
+  "author": "Sangeethks",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Sangeethks/extreme-player/issues"
+  },
+  "homepage": "https://github.com/Sangeethks/extreme-player#readme"
+}

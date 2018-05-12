@@ -31,6 +31,22 @@ module.exports = {
     }, {
       test: /\.css$/,
       loader: ['style-loader', 'css-loader']
+    }, {
+      test: /\.(jpe?g|png|gif|svg)$/i,
+      loader:'file-loader'
+    }, {
+      test: /\.html$/,
+      loader: 'html-loader'
+    }, {
+      test: /\.(mov|mp4)$/,
+      use: [
+        {
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]'
+          }
+        }
+      ]
     }]
   }
 }

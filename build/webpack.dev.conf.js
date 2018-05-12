@@ -19,7 +19,6 @@ const webpackDevConfig = webpackMerge(webpackBaseConfig, {
     contentBase: path.join(__dirname, '../dist/'),
     port: PORT || config.dev.port,
     host: HOST || config.dev.host,
-    contentBase: false,
     quiet: true
   },
   watch: true,

@@ -3,13 +3,76 @@
   <head>
     <meta charset="utf-8">
     <title>Extreme Player Test Page</title>
+    <style media="screen">
+    .ext-video-container {
+      position: relative;
+      width: 80%;
+    }
+    .ext-video video {
+      width: 100%;
+    }
+    .ext-controls-ui {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+    z-index: 22;
+}
+.ext-playback-controls {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+.pbc-sec {
+    display: inline-block;
+}
+.pbc-sec img {
+    width: 70px;
+}
+.pbc-bkwd {
+    margin-right: 30px;
+}
+.pbc-frwd {
+    margin-left: 30px;
+}
+.pbc-play img {
+    width: 90px;
+    position: relative;
+    top: 10px;
+}
+    </style>
   </head>
   <body>
 
     <div class="ext-video-container">
-      <video src="./assets/introduction.mp4">
+      <div class="ext-video">
+        <video src="./assets/introduction.mp4"></video>
+      </div>
+      <div class="ext-controls-ui">
+        <div class="ext-top-controls">
 
-      </video>
+        </div>
+        <div class="ext-playback-controls">
+          <div class="pbc-box">
+            <div class="pbc-bkwd pbc-sec">
+              <img src="./assets/icons/backward.svg">
+            </div>
+            <div class="pbc-play pbc-sec">
+              <img src="./assets/icons/play.svg">
+              <img src="./assets/icons/pause.svg" style="display: none;">
+            </div>
+            <div class="pbc-frwd pbc-sec">
+              <img src="./assets/icons/forward.svg">
+            </div>
+          </div>
+        </div>
+        <div class="ext-bottom-controls">
+
+        </div>
+      </div>
     </div>
   </body>
 </html>

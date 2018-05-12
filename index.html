@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Extreme Player Test Page</title>
-    <style media="screen">
-    .ext-video-container {
-      position: relative;
-      width: 80%;
-    }
-    .ext-video video {
-      width: 100%;
-    }
-    .ext-controls-ui {
+<head>
+  <meta charset="utf-8">
+  <title>Extreme Player Test Page</title>
+  <style media="screen">
+  .ext-video-container {
+    position: relative;
+    width: 80%;
+  }
+  .ext-video video {
+    width: 100%;
+  }
+  .ext-controls-ui {
     position: absolute;
     top: 0;
     left: 0;
@@ -19,177 +19,122 @@
     height: 100%;
     background-color: rgba(0,0,0,0.3);
     z-index: 22;
-}
-.ext-playback-controls {
+  }
+  .ext-playback-controls {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
     text-align: center;
-}
-.pbc-sec {
+  }
+  .pbc-sec {
     display: inline-block;
-}
-.pbc-sec img {
+  }
+  .pbc-sec img {
     width: 70px;
-}
-.pbc-bkwd {
+  }
+  .pbc-bkwd {
     margin-right: 30px;
-}
-.pbc-frwd {
+  }
+  .pbc-frwd {
     margin-left: 30px;
-}
-.pbc-play img {
+  }
+  .pbc-play img {
     width: 90px;
     position: relative;
     top: 10px;
-}
+  }
 
-/** bottom controls **/
-.ext-bottom-controls {
+  /** bottom controls **/
+  .ext-bottom-controls {
     position: relative;
     top: 100%;
     left: 0;
-}
-/** range **/
-input[type="range"] {
-    margin: auto;
+  }
+  /** range **/
+  input[type=range]{
+    /** for webkit supported browsers **/
     -webkit-appearance: none;
-    position: relative;
-    overflow: hidden;
-    height: 4px;
-    width: 100%;
-    cursor: pointer;
-    border-radius: 0;
-    outline: none;
 }
 
-::-webkit-slider-runnable-track {
+/** for webkit supported browsers **/
+input[type=range]::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 5px;
     background: #ddd;
-}
-
-/*
- * 1. Set to 0 width and remove border for a slider without a thumb
- */
-::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    width: 20px;
-    height: 20px;
-    background: red;
-    box-shadow: -100vw 0 0 100vw dodgerblue;
-    border: 10px solid #444;
-}
-
-::-moz-range-track {
-    /* height: 40px; */
-    background: #ddd;
-}
-
-::-moz-range-thumb {
-    background: #fff;
-    height: 40px;
-    width: 20px;
-    border: 3px solid #999;
-    border-radius: 50% !important;
-    box-shadow: -100vw 0 0 100vw dodgerblue;
-    box-sizing: border-box;
-}
-
-::-ms-fill-lower {
-    background: dodgerblue;
-}
-
-::-ms-thumb {
-    background: #fff;
-    border: 2px solid #999;
-    height: 40px;
-    width: 20px;
-    box-sizing: border-box;
-}
-
-::-ms-ticks-after {
-    display: none;
-}
-
-::-ms-ticks-before {
-    display: none;
-}
-
-::-ms-track {
-    background: #ddd;
-    color: transparent;
-    height: 40px;
     border: none;
-}
-
-::-ms-tooltip {
-    display: none;
+    border-radius: 3px;
 }
 input[type=range]::-webkit-slider-thumb {
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-  border: 1px solid #000000;
-  height: 36px;
-  width: 16px;
-  border-radius: 3px;
-  background: red;
-  cursor: pointer;
-  -webkit-appearance: none;
-  margin-top: -14px;
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: goldenrod;
+    margin-top: -4px;
 }
-    </style>
-  </head>
-  <body>
+input[type=range]:focus {
+    outline: none;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #ccc;
+}
 
-    <div class="ext-video-container">
-      <div class="ext-video">
-        <video src="./assets/introduction.mp4"></video>
+</style>
+</head>
+<body>
+
+  <div class="ext-video-container">
+    <div class="ext-video">
+      <video src="./assets/introduction.mp4"></video>
+    </div>
+    <div class="ext-controls-ui">
+      <div class="ext-top-controls">
+
       </div>
-      <div class="ext-controls-ui">
-        <div class="ext-top-controls">
-
-        </div>
-        <div class="ext-playback-controls">
-          <div class="pbc-box">
-            <div class="pbc-bkwd pbc-sec">
-              <img src="./assets/icons/backward.svg">
-            </div>
-            <div class="pbc-play pbc-sec">
-              <img src="./assets/icons/play.svg">
-              <img src="./assets/icons/pause.svg" style="display: none;">
-            </div>
-            <div class="pbc-frwd pbc-sec">
-              <img src="./assets/icons/forward.svg">
-            </div>
+      <div class="ext-playback-controls">
+        <div class="pbc-box">
+          <div class="pbc-bkwd pbc-sec">
+            <img src="./assets/icons/backward.svg">
+          </div>
+          <div class="pbc-play pbc-sec">
+            <img src="./assets/icons/play.svg">
+            <img src="./assets/icons/pause.svg" style="display: none;">
+          </div>
+          <div class="pbc-frwd pbc-sec">
+            <img src="./assets/icons/forward.svg">
           </div>
         </div>
-        <div class="ext-bottom-controls">
-          <div class="ext-bt-ctrls">
-            <div class="bt-progress">
-              <input type="range">
-            </div>
-            <div class="btn-ctrls-misc">
-              <div class="misc-left">
-                <div class="misc-l-duration">
-                  <p><span class="ld-start">00:01:30</span>/<span class="ld-end">00:02:50</span></p>
-                </div>
+      </div>
+      <div class="ext-bottom-controls">
+        <div class="ext-bt-ctrls">
+          <div class="bt-progress">
+            <input type="range">
+          </div>
+          <div class="btn-ctrls-misc">
+            <div class="misc-left">
+              <div class="misc-l-duration">
+                <p><span class="ld-start">00:01:30</span>/<span class="ld-end">00:02:50</span></p>
               </div>
-              <div class="misc-right">
-                <div class="btns">
-                  <button type="button"><img src="./assets/icons/subtitles.svg"></button>
-                  <button type="button">
-                    <img src="./assets/icons/volume-off.svg" style="display: none;">
-                    <img src="./assets/icons/volume-reduced.svg">
-                    <img src="./assets/icons/volume-full.svg" style="display: none;">
-                  </button>
-                  <button type="button">
-                    <img src="./assets/icons/fullscreen.svg">
-                    <img src="./assets/icons/fullscreen-exit.svg">
-                  </button>
-                </div>
+            </div>
+            <div class="misc-right">
+              <div class="btns">
+                <button type="button"><img src="./assets/icons/subtitles.svg"></button>
+                <button type="button">
+                  <img src="./assets/icons/volume-off.svg" style="display: none;">
+                  <img src="./assets/icons/volume-reduced.svg">
+                  <img src="./assets/icons/volume-full.svg" style="display: none;">
+                </button>
+                <button type="button">
+                  <img src="./assets/icons/fullscreen.svg">
+                  <img src="./assets/icons/fullscreen-exit.svg">
+                </button>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </body>
+  </div>
+</body>
 </html>

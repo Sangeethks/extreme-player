@@ -46,17 +46,21 @@
 
   /** bottom controls **/
   .ext-bottom-controls {
-    position: relative;
-    top: 100%;
-    left: 0;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.3);
+      padding: 6px 0 0;
   }
   /** range **/
   input[type=range]{
     /* fix for FF unable to apply focus style bug  */
-    border: 1px solid white;
+    /* border: 1px solid white; */
     /** for webkit supported browsers **/
     -webkit-appearance: none;
     width: 100%;
+    margin: 0
 }
 
 /** The range track **/
@@ -131,7 +135,35 @@ input[type=range]::-ms-thumb {
     border-radius: 50%;
     background: goldenrod;
 }
-
+/** End of input range style **/
+.bt-progress {
+    margin-bottom: 6px;
+}
+.misc-l-duration p {
+  font-family: inherit;
+  margin: 0;
+  font-size: 14px;
+}
+.misc-left {
+    float: left;
+}
+.misc-right {
+    float: right;
+}
+.btn-ctrls-misc {
+    padding: 5px 10px;
+}
+.misc-right .btns button {
+    background: transparent;
+    border: 0;
+    outline: none;
+    padding: 0;
+    margin-left: 15px;
+    cursor: pointer;
+}
+.misc-right .btns button img {
+    width: 16px;
+}
 </style>
 </head>
 <body>
@@ -179,10 +211,11 @@ input[type=range]::-ms-thumb {
                 </button>
                 <button type="button">
                   <img src="./assets/icons/fullscreen.svg">
-                  <img src="./assets/icons/fullscreen-exit.svg">
+                  <img src="./assets/icons/fullscreen-exit.svg" style="display: none;">
                 </button>
               </div>
             </div>
+            <div style="clear: both;"></div>
           </div>
         </div>
       </div>

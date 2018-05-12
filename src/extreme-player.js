@@ -1,3 +1,5 @@
+import backwardSvgIco from '../assets/icons/backward.svg';
+
 class ExtremePlayer {
   constructor(container) {
     this.container = container;
@@ -23,7 +25,6 @@ class ExtremePlayer {
     // (child .ext-player) video tag
     let extElPlayer = document.createElement('video');
     extElPlayer.setAttribute('id', 'ext-el-player');
-    extPlayer.appendChild(extElPlayer);
 
     // (sibling .ext-player)  .ext-controls-ui
     let extVideoUi = document.createElement('div');
@@ -51,9 +52,24 @@ class ExtremePlayer {
     pbcBkwd.setAttribute('style', `
     margin-right: 40px;
     `);
+    // (child pbcBkwd) img
+    let pbcBkwdImg = document.createElement('div');
+    pbcBkwdImg.setAttribute('src', backwardSvgIco);
+
+    // Append to pbcBkwd
+    pbcBkwd.appendChild(pbcBkwdImg);
+
+    // Append to pbcBox
+    pbcBox.appendChild(pbcBkwd);
+
+    // Append to playbackControls
+    playbackControls.appendChild(pbcBox);
+
+    extPlayer.appendChild(extElPlayer);
+    extVideoUi.appendChild(playbackControls);
 
     // append to videoContainer
-    videoContainer.appendChild(extVideo);
+    videoContainer.appendChild(extPlayer);
     videoContainer.appendChild(extVideoUi);
 
     // Append to container

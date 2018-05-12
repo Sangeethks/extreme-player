@@ -1,6 +1,6 @@
 {
   "name": "extreme-player",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "An Amazing HTML5 Player with support to DRM Contents",
   "main": "index.js",
   "scripts": {

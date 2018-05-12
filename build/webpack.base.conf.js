@@ -29,23 +29,8 @@ module.exports = {
         resolve('test')
       ]
     }, {
-      test: /\.(html)$/,
-      use: {
-        loader: ['html-loader', 'file-loader']
-      }
-    }, {
       test: /\.css$/,
       loader: ['style-loader', 'css-loader']
-    }, {
-      test: /\.(mov|mp4)$/,
-      use: [
-        {
-          loader: 'file-loader',
-          options: {
-            name: '[name].[ext]'
-          }
-        }
-      ]
     }]
   }
 }

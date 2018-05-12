@@ -37,6 +37,9 @@ const webpackProdConfig = merge(webpackBaseConfig, {
     new copyWebpackPlugin([{
       from: path.resolve(__dirname, '../package.json'),
       to: config.prod.assetsRoot
+    }, {
+      from: path.resolve(__dirname, '../assets'),
+      to: path.resolve(__dirname, '../dist/assets')
     }]),
     new cleanWebpackPlugin(pathsToClean, cleanOptions)
   ]

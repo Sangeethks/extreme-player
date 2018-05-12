@@ -8,8 +8,7 @@
     "dev": "webpack-dev-server --config build/webpack.dev.conf.js",
     "test": "karma start",
     "build": "webpack --config build/webpack.prod.conf.js",
-    "publish": "npm publish --folder dist",
-    "deploy": "npm run build && npm run publish"
+    "deploy": "npm run build && npm publish --folder dist"
   },
   "repository": {
     "type": "git",

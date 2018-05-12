@@ -30,7 +30,8 @@
     display: inline-block;
   }
   .pbc-sec img {
-    width: 70px;
+    cursor: pointer;
+    width: 60px;
   }
   .pbc-bkwd {
     margin-right: 30px;
@@ -41,7 +42,7 @@
   .pbc-play img {
     width: 90px;
     position: relative;
-    top: 10px;
+    top: 15px;
   }
 
   /** bottom controls **/
@@ -50,8 +51,20 @@
       bottom: 0;
       left: 0;
       width: 100%;
+      padding: 6px 0;
+      color: #fff;
+      /* fallback */
       background-color: rgba(0, 0, 0, 0.3);
-      padding: 6px 0 0;
+      /* Safari 4-5, Chrome 1-9 */
+      background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4c4c4c), to(transparent));
+      /* Safari 5.1, Chrome 10+ */
+      background: -webkit-linear-gradient(top, transparent, #4c4c4c);
+      /* Firefox 3.6+ */
+      background: -moz-linear-gradient(top, transparent, #4c4c4c);
+      /* IE 10 */
+      background: -ms-linear-gradient(top, transparent, #4c4c4c);
+      /* Opera 11.10+ */
+      background: -o-linear-gradient(top, transparent, #4c4c4c);
   }
   /** range **/
   input[type=range]{
@@ -198,7 +211,7 @@ input[type=range]::-ms-thumb {
           <div class="btn-ctrls-misc">
             <div class="misc-left">
               <div class="misc-l-duration">
-                <p><span class="ld-start">00:01:30</span>/<span class="ld-end">00:02:50</span></p>
+                <p><span class="ld-start">00:01:30</span> / <span class="ld-end">00:02:50</span></p>
               </div>
             </div>
             <div class="misc-right">

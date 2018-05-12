@@ -19,9 +19,38 @@ class ExtremePlayer {
     // .ext-player
     let extPlayer = document.createElement('div');
     extPlayer.className = 'ext-player';
-    // ext-controls-ui
+
+    // (child .ext-player) video tag
+    let extElPlayer = document.createElement('video');
+    extElPlayer.setAttribute('id', 'ext-el-player');
+    extPlayer.appendChild(extElPlayer);
+
+    // (sibling .ext-player)  .ext-controls-ui
     let extVideoUi = document.createElement('div');
     extVideoUi.className = 'ext-controls-ui';
+
+    // (child extVideoUi)
+    let topControls = document.createElement('div');
+
+    // (child extVideoUi)
+    let playbackControls = document.createElement('div');
+    playbackControls.setAttribute('style', `position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.3);
+      z-index: 22;`
+    );
+
+    // (child playbackControls)
+    let pbcBox = document.createElement('div');
+
+    // (child pbcBox)
+    let pbcBkwd = document.createElement('div');
+    pbcBkwd.setAttribute('style', `
+    margin-right: 40px;
+    `);
 
     // append to videoContainer
     videoContainer.appendChild(extVideo);

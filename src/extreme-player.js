@@ -153,6 +153,29 @@ class ExtremePlayer {
       margin-bottom: 6px;
     `);
 
+    // input[type="range"]
+    let inputRange = document.createElement('input');
+    inputRange.setAttribute('type', 'range');
+    inputRange.setAttribute('style', `
+      -webkit-appearance: none;
+      width: 100%;
+      margin: 0;
+    `);
+
+    // Now start appending to bt-btCtrls
+    progress.appendChild(inputRange);
+
+    // .btn-ctrls-misc
+    let ctrlsMisc = document.createElement('div');
+    ctrlsMisc.setAttribute('style', `
+      padding: 5px 10px;
+    `);
+    ctrlsMisc.className = 'btn-ctrls-misc';
+
+    // .misc-left
+    let miscLeft = document.createElement('div');
+
+    btCtrls.appendChild(progress);
 
     extPlayer.appendChild(extElPlayer);
     extVideoUi.appendChild(playbackControls);

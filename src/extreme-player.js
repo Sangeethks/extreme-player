@@ -64,6 +64,10 @@ class ExtremePlayer {
     // (child pbcBkwd) img
     let pbcBkwdImg = document.createElement('div');
     pbcBkwdImg.setAttribute('src', backwardSvgIco);
+    pbcBkwdImg.setAttribute('style', `
+      cursor: pointer;
+      width: 60px;
+    `);
 
     // Append to pbcBkwd
     pbcBkwd.appendChild(pbcBkwdImg);
@@ -72,18 +76,83 @@ class ExtremePlayer {
     let pbcPlay = document.createElement('div');
     pbcPlay.className = 'pbc-play';
     pbcPlay.setAttribute('style', `
-      display:inline-block;
+      display: inline-block;
     `);
     // (child pbcPlay) play.svg
     let pbcPlayPlayIco = document.createElement('img');
-    pbcPlayPlayIco.setAttribute('src', '')
+    pbcPlayPlayIco.setAttribute('src', playSvgIco);
+    pbcPlayPlayIco.setAttribute('style', `
+      width: 90px;
+      position: relative;
+      top: 15px;
+      cursor: pointer;
+    `);
+    // (child pbcPlay) pause.svg
+    let pbcPlayPuaseIco = document.createElement('img');
+    pbcPlayPuaseIco.setAttribute('src', playSvgIco);
+    pbcPlayPuaseIco.setAttribute('style', `
+      display: none;
+      width: 90px;
+      position: relative;
+      top: 15px;
+      cursor: pointer;
+    `);
+    // Append to pbcPlay
+    pbcPlay.appendChild(pbcPlayPlayIco);
+    pbcPlay.appendChild(pbcPlayPauseIco);
 
+    // (child pbcBox)
+    let pbcFwd = document.createElement('div');
+    pbcFwd.setAttribute('style', `
+      margin-left: 40px;
+      display: inline-block;
+    `);
+    // (child pbcFwd) img
+    let pbcFwdImg = document.createElement('div');
+    pbcFwdImg.setAttribute('src', forwardSvgIco);
+    pbcFwdImg.setAttribute('style', `
+      cursor: pointer;
+      width: 60px;
+    `);
 
     // Append to pbcBox
     pbcBox.appendChild(pbcBkwd);
+    pbcBox.appendChild(pbcPlay);
+    pbcBox.appendChild(pbcFwd);
 
     // Append to playbackControls
     playbackControls.appendChild(pbcBox);
+
+    // Bottom Controls
+    // .ext-bottom-controls
+    let bottomControls = document.createElement('div');
+    bottomControls.setAttribute('style', `
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 6px 0;
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.3);
+      background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4c4c4c), to(transparent));
+      background: -webkit-linear-gradient(top, transparent, #4c4c4c);
+      background: -moz-linear-gradient(top, transparent, #4c4c4c);
+      background: -ms-linear-gradient(top, transparent, #4c4c4c);
+      background: -o-linear-gradient(top, transparent, #4c4c4c);
+    `);
+    bottomControls.className = 'ext-bottom-controls';
+
+    // .ext-bt-ctrls
+    let btCtrls = document.createElement('div');
+    btCtrls.className = 'ext-bt-ctrls';
+
+    // .bt-progress
+    let progress = document.createElement('div');
+    progress.className = 'bt-progress';
+    progress.setAttribute('style', `
+      margin-bottom: 6px;
+    `);
+
 
     extPlayer.appendChild(extElPlayer);
     extVideoUi.appendChild(playbackControls);

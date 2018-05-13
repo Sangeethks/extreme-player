@@ -1,4 +1,12 @@
 import backwardSvgIco from '../assets/icons/backward.svg';
+import playSvgIco from '../assets/icons/play.svg';
+import pauseSvgIco from '../assets/icons/pause.svg';
+import forwardSvgIco from '../assets/icons/forward.svg';
+import volumeOffSvgIco from '../assets/icons/volume-off.svg';
+import volumeReducedSvgIco from '../assets/icons/volume-reduced.svg';
+import volumeFullSvgIco from '../assets/icons/volume-full.svg';
+import fullscreenSvgIco from '../assets/icons/fullscreen.svg';
+import fullscreenExitSvgIco from '../assets/icons/fullscreen-exit.svg';
 
 class ExtremePlayer {
   constructor(container) {

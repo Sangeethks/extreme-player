@@ -51,6 +51,7 @@ class ExtremePlayer {
     let pbcBkwd = document.createElement('div');
     pbcBkwd.setAttribute('style', `
     margin-right: 40px;
+    display: inline-block;
     `);
     // (child pbcBkwd) img
     let pbcBkwdImg = document.createElement('div');
@@ -58,6 +59,17 @@ class ExtremePlayer {
 
     // Append to pbcBkwd
     pbcBkwd.appendChild(pbcBkwdImg);
+
+    // (child pbcBox)
+    let pbcPlay = document.createElement('div');
+    pbcPlay.className = 'pbc-play';
+    pbcPlay.setAttribute('style', `
+      display:inline-block;
+    `);
+    // (child pbcPlay) play.svg
+    let pbcPlayPlayIco = document.createElement('img');
+    pbcPlayPlayIco.setAttribute('src', '')
+
 
     // Append to pbcBox
     pbcBox.appendChild(pbcBkwd);

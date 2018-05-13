@@ -174,6 +174,38 @@ class ExtremePlayer {
 
     // .misc-left
     let miscLeft = document.createElement('div');
+    miscLeft.className = 'misc-left';
+    miscLeft.setAttribute('style', `
+      float: left;
+    `);
+
+    // .misc-l-duration
+    let miscLDuration = document.createElement('div');
+    miscLDuration.className = 'misc-l-duration';
+
+    // .misc-l-duration p
+    let miscLDurationP = document.createElement('p');
+    miscLDurationP.setAttribute('style', `
+      font-family: inherit;
+      margin: 0;
+      font-size: 14px;
+    `);
+
+    // .misc-l-duration p span.ld-start
+    let miscLDurationPLdStart = document.createElement('span');
+    miscLDurationPSpan.setAttribute('id', 'ld-start');
+    miscLDurationPSpan.className('ld-start');
+    miscLDurationPSpan.innerText = '00:00:00';
+
+    // .misc-l-duration p span.ld-end
+    let miscLDurationPLdEnd = document.createElement('span');
+    miscLDurationPSpan.setAttribute('id', 'ld-end');
+    miscLDurationPSpan.className('ld-end');
+    miscLDurationPSpan.innerText = '00:00:00';
+
+    miscLDurationP.appendChild(miscLDurationPLdStart);
+    miscLDurationP.innerText = ' / ';
+    miscLDurationP.appendChild(miscLDurationPLdEnd);
 
     btCtrls.appendChild(progress);
 

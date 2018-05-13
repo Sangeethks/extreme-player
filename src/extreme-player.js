@@ -58,8 +58,8 @@ class ExtremePlayer {
     // (child pbcBox)
     let pbcBkwd = document.createElement('div');
     pbcBkwd.setAttribute('style', `
-    margin-right: 40px;
-    display: inline-block;
+      margin-right: 40px;
+      display: inline-block;
     `);
     // (child pbcBkwd) img
     let pbcBkwdImg = document.createElement('div');
